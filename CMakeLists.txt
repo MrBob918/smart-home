@@ -9,10 +9,5 @@ file(DOWNLOAD https://github.com/cpm-cmake/CPM.cmake/releases/latest/download/ge
 
 include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
 
-
-CPMAddPackage("gh:nlohmann/json@3.12.0")
-
 add_executable(Handler)
 target_sources(Handler PRIVATE ./main.cpp)
-
-target_link_libraries(Handler nlohmann_json::nlohmann_json)
