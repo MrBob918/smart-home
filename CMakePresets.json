@@ -1,0 +1,42 @@
+{
+    "version": 10,
+    "cmakeMinimumRequired": {
+        "major": 4,
+        "minor": 2,
+        "patch": 0
+    }, "configurePresets": [
+        {
+            "name": "ConfigureRelese",
+            "displayName": "Relese build",
+            "description": "Relese configure with ninja and clang++",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/relese",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Relese",
+                "CMAKE_C_COMPILER": "clang",
+                "CMAKE_CXX_COMPILER": "clang++"
+            }
+        }
+    ], "buildPresets": [
+        {
+            "name": "BuildRelese",
+            "description": "Relese build with ninja and clang++",
+            "configurePreset": "ConfigureRelese"
+        }
+    ], "workflowPresets": [
+        {
+            "name": "CABR",
+            "description": "ConfigureAndBuildRelese",
+            "steps": [
+                {
+                    "type": "configure",
+                    "name": "ConfigureRelese"
+                },
+                {
+                    "type": "build",
+                    "name": "BuildRelese"
+                }
+            ]
+        }
+    ]
+}
