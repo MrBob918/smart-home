@@ -7,6 +7,9 @@ set(AddBoost.cmake_VERSION 3.7.3)
 set(TRY_BOOST_VERSION "1.90.0")
 set(CPM_VERSION v0.42.1)
 
+# cmake options
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # CXX option
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,7 +17,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # boost libraries
 set(BOOST_HEADER_ONLY_COMPONENTS_THAT_YOU_NEED "asio;beast;uuid")
-set(BOOST_NOT_HEADER_ONLY_COMPONENTS_THAT_YOU_NEED "")
+set(BOOST_NOT_HEADER_ONLY_COMPONENTS_THAT_YOU_NEED "system")
 
 ##################################################################
 

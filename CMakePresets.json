@@ -15,6 +15,7 @@
                 "CMAKE_BUILD_TYPE": "Relese",
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS": "1",
                 "-DCPM_DOWNLOAD_ALL": "1",
                 "CPM_SOURCE_CACHE": "${sourceDir}/.cache/cpm"
             }

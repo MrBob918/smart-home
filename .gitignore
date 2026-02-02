@@ -1,6 +1,11 @@
 /.cache/
 .cache/**
 */cache/
+.cache
+
+.vscode/**
+/.vscode/
+.vscode
 
 build/
 build/**
