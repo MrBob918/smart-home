@@ -11,4 +11,9 @@ build/
 build/**
 /build/
 
+/.obsidian/
+*/.obsidian/
+.obsidian/
+.obsidian/**
+
 README.md

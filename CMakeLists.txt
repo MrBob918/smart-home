@@ -9,6 +9,7 @@ set(CPM_VERSION v0.42.1)
 
 # cmake options
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_EXE_NAME Core)
 
 # CXX option
 set(CMAKE_CXX_STANDARD 20)
@@ -23,7 +24,7 @@ set(BOOST_NOT_HEADER_ONLY_COMPONENTS_THAT_YOU_NEED "system")
 
 
 # project name
-project(smart_house)
+project(smart-home)
 
 
 # download section
@@ -50,10 +51,10 @@ add_boost(
 )
 
 # create elf file
-add_executable(Handler)
+add_executable(${CMAKE_EXE_NAME})
 
 # link src files to elf file
-target_sources(Handler PRIVATE ./main.cpp)
+target_sources(${CMAKE_EXE_NAME} PRIVATE ./main.cpp)
 
 # link lib files to elf file
-target_link_libraries(Handler PRIVATE Boost::beast)
+target_link_libraries(${CMAKE_EXE_NAME} PRIVATE Boost::beast)
