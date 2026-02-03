@@ -2,5 +2,5 @@ FROM arm64v8/debian:bookworm-slim
 WORKDIR /SmartHome/Core
 RUN cmake clang install
 COPY . .
-RUN cmake -workflow -preset RCAB
+RUN cmake --workflow -preset RCAB
 CMD "./build/relese/Core"
