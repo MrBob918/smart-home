@@ -1,0 +1,11 @@
+services:
+  Core:
+    build: ./Core/
+    image: coreimage
+    ports:
+      - "9180:8000"
+    networks:
+      - AppNetwork
+networks: 
+  AppNetwork:
+    driver: bridge

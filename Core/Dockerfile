@@ -1,6 +1,6 @@
-FROM arm64v8/debian:bookworm-slim
+FROM arm64v8/debian
 WORKDIR /SmartHome/Core
-RUN cmake clang install
+RUN apt-get update && apt-get -y install cmake clang && apt-get upgrade
 COPY . .
 RUN cmake --workflow -preset RCAB
 CMD "./build/relese/Core"
